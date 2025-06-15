@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #f0f0f0;
+}
+
+/* Bienvenida */
+#welcome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images8.alphacoders.com/123/1234961.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.welcome-box {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #f0f0f0;
+  max-width: 90%;
+}
+
+.welcome-box h2 {
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+
+.welcome-box button {
+  background-color: #FFD700;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.welcome-box button:hover {
+  background-color: #e6c200;
+}
+
+/* Encabezado y nav */
+header {
+  padding: 1rem;
+  background-color: #222;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #FFD700;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #1a1a1a;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.nav button:hover {
+  background-color: #FFD700;
+  color: #000;
+}
+
+/* Controles de búsqueda */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.controls input {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+/* Tarjetas */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 0.8rem;
+}
+
+.card-body h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #FFD700;
+}
+
+/* Modal */
+#details {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  z-index: 10;
+}
+
+#details .content {
+  background-color: #222;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 500px;
+  color: #fff;
+}
+
+#details button {
+  background: #FFD700;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  float: right;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+  }
+}

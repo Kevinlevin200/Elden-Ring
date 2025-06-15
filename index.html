@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elden Ring Encyclopedia</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Pantalla de bienvenida -->
+  <div id="welcome">
+    <div class="welcome-box">
+      <h2>Bienvenido a la Enciclopedia de Elden Ring</h2>
+      <p>Explora jefes, armas, hechizos y personajes del mundo de Elden Ring.<br>Haz clic para comenzar tu viaje.</p>
+      <button id="enterBtn">Explorar</button>
+    </div>
+  </div>
+
+  <!-- Encabezado -->
+  <header>
+    <h1>Enciclopedia Elden Ring</h1>
+  </header>
+
+  <!-- Navegación -->
+  <nav class="nav">
+    <button onclick="loadSection('bosses')">Jefes</button>
+    <button onclick="loadSection('weapons')">Armas</button>
+    <button onclick="loadSection('sorceries')">Hechizos</button>
+    <button onclick="loadSection('incantations')">Conjuros</button>
+    <button onclick="loadSection('npcs')">Personajes</button>
+  </nav>
+
+  <!-- Barra de búsqueda -->
+  <section class="controls">
+    <input type="text" id="search" placeholder="Buscar por nombre..." />
+  </section>
+
+  <!-- Contenedor de tarjetas -->
+  <section class="grid" id="bossGrid">
+    <!-- Elementos cargados aquí -->
+  </section>
+
+  <!-- Modal de detalles -->
+  <div id="details">
+    <div class="content">
+      <button onclick="closeDetails()">Cerrar</button>
+      <div id="detailContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
