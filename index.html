@@ -1,54 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Elden Ring Encyclopedia</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elden Ring - Tierras Intermedias</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo">ELDEN RING</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Inicio</a></li>
+                <li><a href="#bosses" class="nav-link">Jefes</a></li>
+                <li><a href="#weapons" class="nav-link">Armas</a></li>
+                <li><a href="#classes" class="nav-link">Clases</a></li>
+                <li><a href="#spirits" class="nav-link">Espíritus</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-  <!-- Pantalla de bienvenida -->
-  <div id="welcome">
-    <div class="welcome-box">
-      <h2>Bienvenido a la Enciclopedia de Elden Ring</h2>
-      <p>Explora jefes, armas, hechizos y personajes del mundo de Elden Ring.<br>Haz clic para comenzar tu viaje.</p>
-      <button id="enterBtn">Explorar</button>
-    </div>
-  </div>
+    <main class="main">
+        <section id="home" class="section active">
+            <div class="hero">
+                <h1 class="fade-in">Tierras Intermedias</h1>
+                <p class="fade-in">Explora el mundo de Elden Ring: jefes, armas, clases y espíritus en esta guía épica.</p>
+                <a href="#bosses" class="cta-button fade-in">Explorar</a>
+            </div>
+            <div class="cards-grid">
+                <div class="card fade-in">
+                    <div class="card-image">⚔️</div>
+                    <h3>Jefes</h3>
+                    <p>Enfrenta desafíos únicos con historias épicas.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-image">🗡️</div>
+                    <h3>Armas</h3>
+                    <p>Descubre espadas y hechizos legendarios.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-image">🛡️</div>
+                    <h3>Clases</h3>
+                    <p>Encuentra tu estilo de juego ideal.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-image">👻</div>
+                    <h3>Espíritus</h3>
+                    <p>Invoca aliados con habilidades únicas.</p>
+                </div>
+            </div>
+        </section>
 
-  <!-- Encabezado -->
-  <header>
-    <h1>Enciclopedia Elden Ring</h1>
-  </header>
+        <section id="bosses" class="section">
+            <h2 class="section-title">Jefes</h2>
+            <div class="search-container">
+                <input type="text" class="search-input" id="bossSearch" placeholder="Buscar jefe...">
+            </div>
+            <div class="loading" id="bossesLoading"><div class="spinner"></div></div>
+            <div class="cards-grid" id="bossesGrid"></div>
+        </section>
 
-  <!-- Navegación -->
-  <nav class="nav">
-    <button onclick="loadSection('bosses')">Jefes</button>
-    <button onclick="loadSection('weapons')">Armas</button>
-    <button onclick="loadSection('sorceries')">Hechizos</button>
-    <button onclick="loadSection('incantations')">Conjuros</button>
-    <button onclick="loadSection('npcs')">Personajes</button>
-  </nav>
+        <section id="weapons" class="section">
+            <h2 class="section-title">Armas</h2>
+            <div class="search-container">
+                <input type="text" class="search-input" id="weaponSearch" placeholder="Buscar arma...">
+            </div>
+            <div class="filters" id="weaponFilters"></div>
+            <div class="loading" id="weaponsLoading"><div class="spinner"></div></div>
+            <div class="cards-grid" id="weaponsGrid"></div>
+        </section>
 
-  <!-- Barra de búsqueda -->
-  <section class="controls">
-    <input type="text" id="search" placeholder="Buscar por nombre..." />
-  </section>
+        <section id="classes" class="section">
+            <h2 class="section-title">Clases</h2>
+            <div class="loading" id="classesLoading"><div class="spinner"></div></div>
+            <div class="cards-grid" id="classesGrid"></div>
+        </section>
 
-  <!-- Contenedor de tarjetas -->
-  <section class="grid" id="bossGrid">
-    <!-- Elementos cargados aquí -->
-  </section>
+        <section id="spirits" class="section">
+            <h2 class="section-title">Espíritus</h2>
+            <div class="search-container">
+                <input type="text" class="search-input" id="spiritSearch" placeholder="Buscar espíritu...">
+            </div>
+            <div class="loading" id="spiritsLoading"><div class="spinner"></div></div>
+            <div class="cards-grid" id="spiritsGrid"></div>
+        </section>
+    </main>
 
-  <!-- Modal de detalles -->
-  <div id="details">
-    <div class="content">
-      <button onclick="closeDetails()">Cerrar</button>
-      <div id="detailContent"></div>
-    </div>
-  </div>
+    <footer class="footer">
+        <p>© 2025 Elden Ring Explorer. Powered by Elden Ring API.</p>
+    </footer>
 
-  <script src="script.js"></script>
-</body>
-</html>
+    <button class="theme-toggle" id="themeToggle" title="Cambiar tema">🌙</button>
+    <script src="script.js"></script>
